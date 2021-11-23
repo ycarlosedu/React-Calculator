@@ -62,6 +62,7 @@ export default function CalculatorGrid({ children, bg }) {
         // element is a operation but last command was another one
         setValorTela(valorTela + element);
         setAcumulador(element);
+        setOperacao(false);
         return;
       }
     } else if (element === '(') {
@@ -69,14 +70,17 @@ export default function CalculatorGrid({ children, bg }) {
         //element is a ( and last command was a operation
         setValorTela(valorTela + element);
         setAcumulador(null);
+        setOperacao(false);
         return;
       }
       setValorTela(valorTela + '*' + element); // last command was another one
       setAcumulador(null);
+      setOperacao(false);
     } else {
       //element is a )
       setValorTela(valorTela + element);
       setAcumulador(null);
+      setOperacao(false);
     }
   };
 
