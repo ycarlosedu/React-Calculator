@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import styled from 'styled-components';
 import React, { useContext } from 'react';
 import Button from './Button';
